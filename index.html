@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Links</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #8B5E3C, #b5a595);
+            color: #FFF8E1;
+            text-align: center;
+        }
+        .container {
+            background: rgba(255, 248, 225, 0.1);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out;
+        }
+        h1 {
+            margin-bottom: 15px;
+            font-size: 24px;
+            color: #fffefb;
+        }
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .links a, .links button {
+            text-decoration: none;
+            color: #f8f1d9;
+            background: rgba(218, 165, 32, 0.8);
+            padding: 12px 20px;
+            border-radius: 8px;
+            transition: 0.3s;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+        .links a:hover, .links button:hover {
+            background: rgba(218, 165, 32, 1);
+            transform: scale(1.05);
+        }
+        .sub-links {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Meus Links</h1>
+        <div class="links">
+            <button onclick="toggleLinks('valentina')">Unidade Valentina</button>
+            <div id="valentina" class="sub-links">
+                <a href="https://wa.me/" target="_blank">WhatsApp</a>
+                <a href="https://www.instagram.com/oralleoficial?igsh=MWMydGdwM2Exd3Nzcg==" target="_blank">Instagram</a>
+                <a href="#">Localização</a>
+            </div>
+            
+            <button onclick="toggleLinks('atlantis')">Unidade Atlantis Office</button>
+            <div id="atlantis" class="sub-links">
+                <a href="wa.me/5583999716256" target="_blank">WhatsApp</a>
+                <a href="https://www.instagram.com/dr.ticianooliveira?igsh=MXdnemc2eXQzNnE2dQ==" target="_blank">Instagram</a>
+                <a href="#">Localização</a>
+            </div>
+            
+            <a href="#">Quem Somos</a>
+        </div>
+    </div>
+    
+    <script>
+        function toggleLinks(id) {
+            let element = document.getElementById(id);
+            element.style.display = (element.style.display === "flex") ? "none" : "flex";
+        }
+    </script>
+</body>
+</html>
