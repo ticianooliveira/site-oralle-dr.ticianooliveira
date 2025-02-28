@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus Links</title>
+    <title>Oralle | Dr. Ticiano</title>
     <style>
         * {
-            margin: 0;
+            margin: 20;
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
@@ -16,76 +16,99 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(135deg, #8B5E3C, #b5a595);
+            background: linear-gradient(135deg, #cdae2f, #b5a595);
             color: #FFF8E1;
             text-align: center;
         }
         .container {
             background: rgba(255, 248, 225, 0.1);
-            padding: 40px;
-            border-radius: 12px;
+            padding: 50px;
+            border-radius: 10px;
             box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
-            animation: fadeIn 1s ease-in-out;
+            animation: fadeIn 3s ease-in-out;
         }
         h1 {
-            margin-bottom: 15px;
-            font-size: 24px;
+            font-size: 28px;
             color: #fffefb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            white-space: nowrap;
         }
         .links {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 15px;
         }
-        .links a, .links button {
+        .links button {
+            font-size: 20px;
             text-decoration: none;
             color: #f8f1d9;
             background: rgba(218, 165, 32, 0.8);
-            padding: 25px 20px;
-            border-radius: 20px;
+            padding: 15px 20px;
+            border-radius: 12px;
             transition: 0.3s;
             font-weight: bold;
             border: none;
             cursor: pointer;
         }
-        .links a:hover, .links button:hover {
+        .links button:hover {
             background: rgba(218, 165, 32, 1);
-            transform: scale(1.10);
+            transform: scale(1.05);
         }
         .sub-links {
-            display: none;
-            flex-direction: row;
-            gap: 15px;
-            margin-top: 5px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .sub-links a {
+            font-size: 16px;
+            text-decoration: none;
+            color: #f8f1d9;
+            background: rgba(218, 165, 32, 0.6);
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+        .sub-links a:hover {
+            background: rgba(218, 165, 32, 0.9);
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Meus Links</h1>
+        <h1>Oralle | Dr. Ticiano</h1>
         <div class="links">
-            <button onclick="toggleLinks('valentina')">Unidade Valentina</button>
+            <button onclick="toggleDropdown('valentina')">Unidade Valentina</button>
             <div id="valentina" class="sub-links">
                 <a href="https://wa.me/5583998464959" target="_blank">WhatsApp</a>
                 <a href="https://www.instagram.com/oralleoficial?igsh=MWMydGdwM2Exd3Nzcg==" target="_blank">Instagram</a>
                 <a href="https://maps.app.goo.gl/WcaZsXscjxq5P7zv7" target="_blank">Localização</a>
             </div>
             
-            <button onclick="toggleLinks('atlantis')">Unidade Atlantis Office</button>
+            <button onclick="toggleDropdown('atlantis')">Unidade Atlantis Office</button>
             <div id="atlantis" class="sub-links">
                 <a href="https://wa.me/558399716256" target="_blank">WhatsApp</a>
                 <a href="https://www.instagram.com/dr.ticianooliveira?igsh=MXdnemc2eXQzNnE2dQ==" target="_blank">Instagram</a>
                 <a href="https://maps.app.goo.gl/RzXhsavQfC8vRjAK8" target="_blank">Localização</a>
             </div>
             
-            <a href="#">Quem Somos</a>
         </div>
     </div>
     
     <script>
-        function toggleLinks(id) {
+        function toggleDropdown(id) {
             let element = document.getElementById(id);
-            element.style.display = (element.style.display === "flex") ? "none" : "flex";
+            if (element.style.maxHeight) {
+                element.style.maxHeight = null;
+            } else {
+                element.style.maxHeight = element.scrollHeight + "px";
+            }
         }
     </script>
 </body>
