@@ -75,9 +75,58 @@
             background: rgba(218, 165, 32, 0.9);
             transform: scale(1.05);
         }
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .popup-content {
+            background: rgba(255, 248, 225, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .popup-content h2 {
+            margin-bottom: 15px;
+            color: #8b6f47;
+        }
+        .popup-content p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        .popup-content button {
+            padding: 10px 20px;
+            background-color: #d4af37;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        .popup-content button:hover {
+            background-color: #8b6f47;
+        }
     </style>
 </head>
 <body>
+    <div class="popup" id="welcomePopup">
+        <div class="popup-content">
+            <h2>Bem-vindo à Oralle!</h2>
+            <p>Aqui, seu sorriso é nossa prioridade. Explore nossas unidades e descubra como podemos transformar o seu dia com um atendimento de excelência!</p>
+            <button onclick="closePopup()">Continuar</button>
+        </div>
+    </div>
+
     <div class="container">
         <h1>Oralle | Dr. Ticiano</h1>
         <div class="links">
@@ -106,6 +155,16 @@
                 element.style.maxHeight = element.scrollHeight + "px";
             }
         }
+
+        function closePopup() {
+            document.getElementById('welcomePopup').style.display = 'none';
+        }
+
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('welcomePopup').style.display = 'flex';
+            }, 500);
+        };
     </script>
 </body>
 </html>
