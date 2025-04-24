@@ -1,156 +1,220 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oralle | Dr. Ticiano</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-            color: #ffffff;
-        }
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: url('Imagens/DSC_4925.jpg') no-repeat center center fixed;
-            background-size: cover;
-            text-align: center;
-        }
-        .container {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
-            animation: fadeIn 3s ease-in-out;
-        }
-        h1 {
-            font-size: 28px;
-        }
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .links button {
-            font-size: 20px;
-            background: rgba(218, 165, 32, 0.8);
-            padding: 15px 20px;
-            border-radius: 12px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .links button:hover {
-            background: rgba(218, 165, 32, 1);
-            transform: scale(1.05);
-        }
-        .sub-links {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease-out;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .sub-links a {
-            font-size: 16px;
-            background: rgba(218, 165, 32, 0.6);
-            padding: 10px 15px;
-            border-radius: 8px;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .sub-links a:hover {
-            background: rgba(218, 165, 32, 0.9);
-            transform: scale(1.05);
-        }
-        .popup {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-        .popup-content {
-            background: rgba(255, 248, 225, 0.9);
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            color: #8b6f47;
-        }
-        .popup-content button {
-            padding: 10px 20px;
-            background-color: #d4af37;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: 0.3s;
-        }
-        .popup-content button:hover {
-            background-color: #8b6f47;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oralle | Dr. Ticiano</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-image: url('style/background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 3s ease-in-out;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .links button {
+      font-size: 20px;
+      background: rgba(218, 165, 32, 0.8);
+      padding: 15px 20px;
+      border-radius: 12px;
+      transition: 0.3s;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .links button:hover {
+      background: rgba(218, 165, 32, 1);
+      transform: scale(1.05);
+    }
+
+    .sub-links {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .sub-links a {
+      font-size: 16px;
+      text-decoration: none;
+      background: rgba(218, 165, 32, 0.6);
+      padding: 10px 15px;
+      border-radius: 8px;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    .sub-links a:hover {
+      background: rgba(218, 165, 32, 0.9);
+      transform: scale(1.05);
+    }
+
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      padding: 20px;
+    }
+
+    .popup-content {
+      background: rgba(255, 248, 225, 0.9);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+      max-width: 90%;
+    }
+
+    .popup-content h2 {
+      margin-bottom: 15px;
+      color: #8b6f47;
+    }
+
+    .popup-content p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .popup-content button {
+      padding: 10px 20px;
+      background-color: #d4af37;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .popup-content button:hover {
+      background-color: #8b6f47;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 24px;
+        flex-wrap: wrap;
+      }
+
+      .links button {
+        font-size: 18px;
+        padding: 12px;
+      }
+
+      .sub-links a {
+        font-size: 15px;
+        padding: 10px;
+      }
+
+      .container {
+        padding: 30px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 20px;
+      }
+
+      .links button {
+        font-size: 16px;
+        padding: 10px;
+      }
+
+      .sub-links a {
+        font-size: 14px;
+      }
+
+      .popup-content button {
+        font-size: 16px;
+        padding: 8px 16px;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-    <div class="popup" id="welcomePopup">
-        <div class="popup-content">
-            <h2>Bem-vindo à Oralle!</h2>
-            <p>Aqui, seu sorriso é nossa prioridade.</p>
-            <button onclick="closePopup()">Continuar</button>
-        </div>
+  <div class="popup" id="welcomePopup">
+    <div class="popup-content">
+      <h2>Bem-vindo à Oralle!</h2>
+      <p>Aqui, seu sorriso é nossa prioridade. Explore nossas unidades e descubra como podemos transformar o seu dia com um atendimento de excelência!</p>
+      <button onclick="closePopup()">Continuar</button>
     </div>
+  </div>
 
-    <div class="container">
-        <h1>Oralle | Dr. Ticiano</h1>
-        <div class="links">
-            <button onclick="toggleDropdown('valentina')">Unidade Valentina</button>
-            <div id="valentina" class="sub-links">
-                <a href="https://wa.me/5583998464959" target="_blank">WhatsApp</a>
-                <a href="https://www.instagram.com/oralleoficial" target="_blank">Instagram</a>
-                <a href="https://maps.app.goo.gl/WcaZsXscjxq5P7zv7" target="_blank">Localização</a>
-            </div>
+  <div class="container">
+    <h1>Oralle | Dr. Ticiano</h1>
+    <div class="links">
+      <button onclick="toggleDropdown('valentina')">Unidade Valentina</button>
+      <div id="valentina" class="sub-links">
+        <a href="https://wa.me/5583998464959" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/oralleoficial" target="_blank">Instagram</a>
+        <a href="https://maps.app.goo.gl/WcaZsXscjxq5P7zv7" target="_blank">Localização</a>
+      </div>
 
-            <button onclick="toggleDropdown('atlantis')">Unidade Atlantis Office</button>
-            <div id="atlantis" class="sub-links">
-                <a href="https://wa.me/558399716256" target="_blank">WhatsApp</a>
-                <a href="https://www.instagram.com/dr.ticianooliveira" target="_blank">Instagram</a>
-                <a href="https://maps.app.goo.gl/RzXhsavQfC8vRjAK8" target="_blank">Localização</a>
-            </div>
-        </div>
+      <button onclick="toggleDropdown('atlantis')">Unidade Atlantis Office</button>
+      <div id="atlantis" class="sub-links">
+        <a href="https://wa.me/558399716256" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/dr.ticianooliveira" target="_blank">Instagram</a>
+        <a href="https://maps.app.goo.gl/RzXhsavQfC8vRjAK8" target="_blank">Localização</a>
+      </div>
     </div>
+  </div>
 
-    <script>
-        function toggleDropdown(id) {
-            let el = document.getElementById(id);
-            if (el.style.maxHeight) {
-                el.style.maxHeight = null;
-            } else {
-                el.style.maxHeight = el.scrollHeight + "px";
-            }
-        }
-
-        function closePopup() {
-            document.getElementById("welcomePopup").style.display = "none";
-        }
-
-        window.onload = function () {
-            setTimeout(() => {
-                document.getElementById("welcomePopup").style.display = "flex";
-            }, 500);
-        };
-    </script>
+  <script src="scripts/main.js"></script>
 </body>
 </html>
