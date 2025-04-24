@@ -1,7 +1,0 @@
-{
-    "files.exclude": {
-        "**/.git": true,
-        "**/.vscode": true
-    },
-    "editor.formatOnSave": true
-}
