@@ -3,185 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oralle | Dr. Ticiano</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-            color: #ffffff;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-            background-image: url('style/background1.jpg'); /* Ajuste para o caminho correto */
-            background-size: cover; /* Preenche o fundo proporcionalmente */
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            text-align: center;
-        }
-
-        .container {
-            background: rgba(255, 248, 225, 0.145);
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
-            animation: fadeIn 3s ease-in-out;
-        }
-
-        h1 {
-            font-size: 28px;
-            white-space: nowrap;
-        }
-
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .links button {
-            font-size: 20px;
-            text-decoration: none;
-            background: rgba(218, 165, 32, 0.8);
-            padding: 15px 20px;
-            border-radius: 12px;
-            transition: 0.3s;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-        }
-
-        .links button:hover {
-            background: rgba(218, 165, 32, 1);
-            transform: scale(1.05);
-        }
-
-        .sub-links {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease-out;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .sub-links a {
-            font-size: 16px;
-            text-decoration: none;
-            background: rgba(218, 165, 32, 0.6);
-            padding: 10px 15px;
-            border-radius: 8px;
-            transition: 0.3s;
-            font-weight: bold;
-        }
-
-        .sub-links a:hover {
-            background: rgba(218, 165, 32, 0.9);
-            transform: scale(1.05);
-        }
-
-        .popup {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .popup-content {
-            background: rgba(255, 248, 225, 0.9);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-            text-align: center;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        .popup-content h2 {
-            margin-bottom: 15px;
-            color: #8b6f47;
-        }
-
-        .popup-content p {
-            margin-bottom: 20px;
-            color: #555;
-        }
-
-        .popup-content button {
-            padding: 10px 20px;
-            background-color: #d4af37;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: 0.3s;
-        }
-
-        .popup-content button:hover {
-            background-color: #8b6f47;
-        }
-    </style>
+    <title>Oralle | Dr. Ticiano Oliveira</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
-    <div class="popup" id="welcomePopup">
-        <div class="popup-content">
-            <h2>Bem-vindo à Oralle!</h2>
-            <p>Aqui, seu sorriso é nossa prioridade. Explore nossas unidades e descubra como podemos transformar o seu dia com um atendimento de excelência!</p>
-            <button onclick="closePopup()">Continuar</button>
+
+    <header class="glass-header">
+        <nav class="container">
+            <img src="images/logos/logo-oralle.png" alt="Oralle Logo" class="logo-img">
+            <ul>
+                <li><a href="#procedimentos">Procedimentos</a></li>
+                <li><a href="#sobre">O Doutor</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#unidades">Unidades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="videos/background-video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay">
+            <h1 class="reveal">Excelência em cada detalhe do seu sorriso.</h1>
+            <a href="#unidades" class="btn-gold">Agendar Avaliação</a>
         </div>
-    </div>
+    </section>
 
-    <div class="container">
-        <h1>Oralle | Dr. Ticiano</h1>
-        <div class="links">
-            <button onclick="toggleDropdown('valentina')">Unidade Valentina</button>
-            <div id="valentina" class="sub-links">
-                <a href="https://wa.me/5583998464959" target="_blank">WhatsApp</a>
-                <a href="https://www.instagram.com/oralleoficial?igsh=MWMydGdwM2Exd3Nzcg==" target="_blank">Instagram</a>
-                <a href="https://maps.app.goo.gl/WcaZsXscjxq5P7zv7" target="_blank">Localização</a>
+    <section id="procedimentos" class="services">
+        <h2 class="section-title reveal">O que você procura?</h2>
+        <div class="services-grid">
+            <div class="service-card reveal">
+                <img src="images/procedimentos/clareamento.jpg" alt="Clareamento">
+                <div class="service-overlay"><p>Remoção de manchas e pigmentações para um sorriso mais branco e radiante.</p></div>
+                <h3>Clareamento</h3>
             </div>
-            
-            <button onclick="toggleDropdown('atlantis')">Unidade Atlantis Office</button>
-            <div id="atlantis" class="sub-links">
-                <a href="https://wa.me/558399716256" target="_blank">WhatsApp</a>
-                <a href="https://www.instagram.com/dr.ticianooliveira?igsh=MXdnemc2eXQzNnE2dQ==" target="_blank">Instagram</a>
-                <a href="https://maps.app.goo.gl/RzXhsavQfC8vRjAK8" target="_blank">Localização</a>
+            <div class="service-card reveal">
+                <img src="images/procedimentos/implante.jpg" alt="Implantes">
+                <div class="service-overlay"><p>Reabilitação fixa para devolver a função mastigatória e a estética com naturalidade.</p></div>
+                <h3>Implantes</h3>
+            </div>
+            <div class="service-card reveal">
+                <img src="images/procedimentos/orto.jpg" alt="Ortodontia">
+                <div class="service-overlay"><p>Correção do alinhamento dental para um sorriso harmônico e uma mordida saudável.</p></div>
+                <h3>Ortodontia</h3>
+            </div>
+            <div class="service-card reveal">
+                <img src="images/procedimentos/protese.jpg" alt="Próteses">
+                <div class="service-overlay"><p>Soluções protéticas personalizadas para recuperar a harmonia e saúde bucal.</p></div>
+                <h3>Próteses</h3>
+            </div>
+            <div class="service-card reveal">
+                <img src="images/procedimentos/limpeza.jpg" alt="Limpeza">
+                <div class="service-overlay"><p>Prevenção e remoção de tártaro para manter as gengivas saudáveis e hálito fresco.</p></div>
+                <h3>Limpeza</h3>
+            </div>
+            <div class="service-card reveal">
+                <img src="images/procedimentos/restauracao.jpg" alt="Restauração">
+                <div class="service-overlay"><p>Reconstrução da estrutura dental afetada por cáries ou traumas com resinas estéticas.</p></div>
+                <h3>Restauração</h3>
             </div>
         </div>
-    </div>
-    
-    <script>
-        function toggleDropdown(id) {
-            let element = document.getElementById(id);
-            if (element.style.maxHeight) {
-                element.style.maxHeight = null;
-            } else {
-                element.style.maxHeight = element.scrollHeight + "px";
-            }
-        }
+    </section>
 
-        function closePopup() {
-            document.getElementById('welcomePopup').style.display = 'none';
-        }
+    <section id="depoimentos" class="testimonials">
+        <h2 class="section-title reveal">O que dizem nossos pacientes</h2>
+        <div class="testimonial-container">
+            <div class="testimonial-track" id="testimonialTrack">
+                <div class="testimonial-card"><div class="google-stars">★★★★★</div><p>"Atendimento impecável! Dr. Ticiano é muito atencioso."</p><span>- Mariana G.</span></div>
+                <div class="testimonial-card"><div class="google-stars">★★★★★</div><p>"A unidade Valentina é ótima. Equipe muito profissional."</p><span>- Lucas V.</span></div>
+                <div class="testimonial-card"><div class="google-stars">★★★★★</div><p>"Implantes com segurança e resultado perfeito."</p><span>- Fernando R.</span></div>
+                <div class="testimonial-card"><div class="google-stars">★★★★★</div><p>"Tecnologia de ponta em João Pessoa. Recomendo!"</p><span>- Cláudia M.</span></div>
+                <div class="testimonial-card"><div class="google-stars">★★★★★</div><p>"Excelente profissional, explica tudo com paciência."</p><span>- João Pedro L.</span></div>
+                <div class="testimonial-card"><div class="google-stars">★★★★★</div><p>"Ambiente acolhedor e cuidado humanizado."</p><span>- Beatriz S.</span></div>
+                <div class="testimonial-card"><div class="google-stars">★★★★★</div><p>"Tratamento ortodôntico de excelência."</p><span>- Ricardo A.</span></div>
+                <div class="testimonial-card"><div class="google-stars">★★★★★</div><p>"Autoestima renovada com meu novo sorriso."</p><span>- Heloísa N.</span></div>
+                <div class="testimonial-card"><div class="google-stars">★★★★★</div><p>"Clínica extremamente organizada e limpa."</p><span>- Carla F.</span></div>
+                <div class="testimonial-card"><div class="google-stars">★★★★★</div><p>"O melhor dentista de João Pessoa."</p><span>- Marcos T.</span></div>
+            </div>
+        </div>
+    </section>
 
-        window.onload = function() {
-            setTimeout(function() {
-                document.getElementById('welcomePopup').style.display = 'flex';
-            }, 500);
-        };
-    </script>
+    <section id="sobre" class="about">
+        <div class="about-container">
+            <div class="about-visual reveal">
+                <div class="video-shape">
+                    <video autoplay muted loop playsinline class="lifestyle-video">
+                        <source src="videos/lifestyle-doutor.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="shape-accent"></div>
+            </div>
+            <div class="about-text reveal">
+                <h2>Dr. Ticiano Oliveira</h2>
+                <h3>Excelência moldada pela experiência</h3>
+                <p>Com mais de 10 anos de trajetória dedicados à saúde bucal, o Dr. Ticiano Oliveira combina maestria técnica e um olhar humanizado. Especialista em <strong>Implantodontia</strong> e <strong>Ortodontia</strong>, dedica-se a reabilitar a função e a autoconfiança de cada paciente.</p>
+                <p>Sua prática é pautada pelo rigor científico e pelo uso de tecnologias avançadas, garantindo tratamentos precisos e resultados de alto padrão estético.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="unidades" class="footer-premium">
+        <div class="footer-container">
+            <div class="footer-column reveal">
+                <img src="images/logos/logo-oralle.png" class="footer-unit-logo" alt="Oralle Valentina">
+                <h3>Unidade Valentina</h3>
+                <p>R. Mariangela Lucena Peixoto, 1441 - Sala 103/104<br>Valentina de Figueiredo, João Pessoa - PB</p>
+                <div class="footer-actions">
+                    <a href="https://wa.me/5583998464959" class="btn-action">WhatsApp</a>
+                    <a href="https://www.instagram.com/oralleoficial" target="_blank" class="btn-action">Instagram</a>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.468222955519!2d-34.850406!3d-7.204394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acec18fadb93287%3A0x445301b10ecb0de0!2sORALLE%20-%20Cl%C3%ADnica%20Odontol%C3%B3gica!5e0!3m2!1spt-BR!2sbr!4v1710000000000" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="footer-column reveal">
+                <img src="images/logos/logo-ticiano.png" class="footer-unit-logo" alt="Dr. Ticiano Atlantis">
+                <h3>Unidade Atlantis Office</h3>
+                <p>Av. Pres. Epitácio Pessoa, 2930 - Tambauzinho<br>João Pessoa - PB, 58042-006</p>
+                <div class="footer-actions">
+                    <a href="https://wa.me/558399716256" class="btn-action">WhatsApp</a>
+                    <a href="https://www.instagram.com/dr.ticianooliveira" target="_blank" class="btn-action">Instagram</a>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.1154388167384!2d-34.8462966!3d-7.1199147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ace9d4715c55a0b%3A0x4a7569804e5e5dc2!2sAtlantis%20Offices%20Design%20Empresarial!5e0!3m2!1spt-BR!2sbr!4v1710000000000" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>© 2025 Oralle & Dr. Ticiano Oliveira. Todos os direitos reservados.</p></div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
