@@ -1,139 +1,188 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Atendimento odontológico em João Pessoa com o Dr. Ticiano Oliveira e a Oralle. Implantodontia, ortodontia, próteses e cuidados preventivos.">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#f8f7f2">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; frame-src https://www.google.com; connect-src 'none'; upgrade-insecure-requests">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Oralle | Dr. Ticiano Oliveira">
+    <meta property="og:description" content="Excelência, cuidado humanizado e tecnologia para o seu sorriso em João Pessoa.">
+    <meta property="og:image" content="images/optimized/hero-poster.jpg">
     <title>Oralle | Dr. Ticiano Oliveira</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="stylesheet" href="style/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-
     <header class="glass-header">
-        <nav class="nav-container">
-            <ul class="nav-links">
+        <nav class="nav-container" aria-label="Navegação principal">
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#procedimentos">Procedimentos</a></li>
                 <li><a href="#sobre">Quem sou</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#avaliacoes">Avaliações</a></li>
                 <li><a href="#unidades">Unidades</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <video autoplay muted loop playsinline class="bg-video">
-            <source src="videos/background-video.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay">
-            <h1 class="reveal">Excelência em cada detalhe do seu sorriso.</h1>
-            <a href="#unidades" class="btn-gold">Agendar Avaliação</a>
-        </div>
-    </section>
+    <main>
+        <section class="hero" id="inicio" aria-labelledby="hero-title">
+            <video autoplay muted loop playsinline preload="metadata" poster="images/optimized/hero-poster.jpg" class="bg-video" aria-hidden="true">
+                <source src="videos/hero-optimized.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay">
+                <p class="eyebrow reveal">Dr. Ticiano Oliveira / Oralle</p>
+                <h1 class="reveal" id="hero-title">Excelência em cada detalhe do seu sorriso.</h1>
+                <a href="#unidades" class="btn-gold">Agendar avaliação</a>
+            </div>
+        </section>
 
-    <section id="procedimentos" class="services">
-        <h2 class="section-title reveal">O que você procura?</h2><p></p>
-        <div class="services-grid">
-            <div class="service-card reveal">
-                <img src="images/procedimentos/clareamento.jpg" alt="Clareamento">
-                <div class="service-overlay"><p>Remoção de manchas e pigmentações para um sorriso mais branco e radiante.</p></div>
-                <h3>Clareamento</h3>
+        <section id="procedimentos" class="services">
+            <h2 class="section-title reveal">O que você procura?</h2>
+            <div class="services-grid">
+                <article class="service-card reveal">
+                    <img src="images/optimized/clareamento.webp" alt="Atendimento de clareamento dental" width="900" height="900" loading="lazy" decoding="async">
+                    <div class="service-overlay"><p>Remoção de manchas e pigmentações para um sorriso mais branco e radiante.</p></div>
+                    <h3>Clareamento</h3>
+                </article>
+                <article class="service-card reveal">
+                    <img src="images/optimized/implante.webp" alt="Planejamento de implante dentário" width="900" height="900" loading="lazy" decoding="async">
+                    <div class="service-overlay"><p>Reabilitação fixa para devolver a função mastigatória e a estética com naturalidade.</p></div>
+                    <h3>Implantes</h3>
+                </article>
+                <article class="service-card reveal">
+                    <img src="images/optimized/orto.webp" alt="Tratamento ortodôntico" width="900" height="900" loading="lazy" decoding="async">
+                    <div class="service-overlay"><p>Correção do alinhamento dental para um sorriso harmônico e uma mordida saudável.</p></div>
+                    <h3>Ortodontia</h3>
+                </article>
+                <article class="service-card reveal">
+                    <img src="images/optimized/protese.webp" alt="Prótese odontológica" width="900" height="900" loading="lazy" decoding="async">
+                    <div class="service-overlay"><p>Soluções protéticas personalizadas para recuperar a harmonia e saúde bucal.</p></div>
+                    <h3>Próteses</h3>
+                </article>
+                <article class="service-card reveal">
+                    <img src="images/optimized/limpeza.webp" alt="Profilaxia e cuidado preventivo" width="900" height="900" loading="lazy" decoding="async">
+                    <div class="service-overlay"><p>Prevenção e remoção de tártaro para manter as gengivas saudáveis e hálito fresco.</p></div>
+                    <h3>Limpeza</h3>
+                </article>
+                <article class="service-card reveal">
+                    <img src="images/optimized/restauracao.webp" alt="Procedimento restaurador odontológico" width="900" height="900" loading="lazy" decoding="async">
+                    <div class="service-overlay"><p>Reconstrução da estrutura dental afetada por cáries ou traumas com resinas estéticas.</p></div>
+                    <h3>Restauração</h3>
+                </article>
             </div>
-            <div class="service-card reveal">
-                <img src="images/procedimentos/implante.jpg" alt="Implantes">
-                <div class="service-overlay"><p>Reabilitação fixa para devolver a função mastigatória e a estética com naturalidade.</p></div>
-                <h3>Implantes</h3>
-            </div>
-            <div class="service-card reveal">
-                <img src="images/procedimentos/orto.jpg" alt="Ortodontia">
-                <div class="service-overlay"><p>Correção do alinhamento dental para um sorriso harmônico e uma mordida saudável.</p></div>
-                <h3>Ortodontia</h3>
-            </div>
-            <div class="service-card reveal">
-                <img src="images/procedimentos/protese.jpg" alt="Próteses">
-                <div class="service-overlay"><p>Soluções protéticas personalizadas para recuperar a harmonia e saúde bucal.</p></div>
-                <h3>Próteses</h3>
-            </div>
-            <div class="service-card reveal">
-                <img src="images/procedimentos/limpeza.jpg" alt="Limpeza">
-                <div class="service-overlay"><p>Prevenção e remoção de tártaro para manter as gengivas saudáveis e hálito fresco.</p></div>
-                <h3>Limpeza</h3>
-            </div>
-            <div class="service-card reveal">
-                <img src="images/procedimentos/restauracao.jpg" alt="Restauração">
-                <div class="service-overlay"><p>Reconstrução da estrutura dental afetada por cáries ou traumas com resinas estéticas.</p></div>
-                <h3>Restauração</h3>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="depoimentos" class="testimonials">
-        <h2 class="section-title reveal">O que dizem nossos pacientes</h2>
-        <div class="testimonial-container">
-            <div class="testimonial-track" id="testimonialTrack">
-                <div class="testimonial-card"><div class="google-stars">★★★★★</div><p>"Atendimento impecável! Dr. Ticiano é muito atencioso."</p><span>- Mariana G.</span></div>
-                <div class="testimonial-card"><div class="google-stars">★★★★★</div><p>"A unidade Valentina é ótima. Equipe muito profissional."</p><span>- Lucas V.</span></div>
-                <div class="testimonial-card"><div class="google-stars">★★★★★</div><p>"Implantes com segurança e resultado perfeito."</p><span>- Fernando R.</span></div>
-                <div class="testimonial-card"><div class="google-stars">★★★★★</div><p>"Tecnologia de ponta em João Pessoa. Recomendo!"</p><span>- Cláudia M.</span></div>
-                <div class="testimonial-card"><div class="google-stars">★★★★★</div><p>"Excelente profissional, explica tudo com paciência."</p><span>- João Pedro L.</span></div>
-                <div class="testimonial-card"><div class="google-stars">★★★★★</div><p>"Ambiente acolhedor e cuidado humanizado."</p><span>- Beatriz S.</span></div>
-                <div class="testimonial-card"><div class="google-stars">★★★★★</div><p>"Tratamento ortodôntico de excelência."</p><span>- Ricardo A.</span></div>
-                <div class="testimonial-card"><div class="google-stars">★★★★★</div><p>"Autoestima renovada com meu novo sorriso."</p><span>- Heloísa N.</span></div>
-                <div class="testimonial-card"><div class="google-stars">★★★★★</div><p>"Clínica extremamente organizada e limpa."</p><span>- Carla F.</span></div>
-                <div class="testimonial-card"><div class="google-stars">★★★★★</div><p>"O melhor dentista de João Pessoa."</p><span>- Marcos T.</span></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="sobre" class="about">
-        <div class="about-container">
-            <div class="about-visual reveal">
-                <div class="video-shape">
-                    <video autoplay muted loop playsinline class="lifestyle-video">
-                        <source src="videos/lifestyle-doutor.mp4" type="video/mp4">
-                    </video>
+        <section id="avaliacoes" class="reviews" aria-labelledby="reviews-title">
+            <div class="reviews-container reveal">
+                <p class="eyebrow">Experiências compartilhadas</p>
+                <h2 class="section-title" id="reviews-title">O que dizem nossos pacientes</h2>
+                <div class="testimonial-carousel" role="region" aria-roledescription="carrossel" aria-label="Depoimentos de pacientes">
+                    <button class="carousel-button carousel-previous" type="button" aria-label="Ver depoimento anterior">‹</button>
+                    <div class="testimonial-viewport" tabindex="0">
+                    <div class="testimonial-grid" aria-live="off">
+                    <article class="testimonial-card">
+                        <div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+                        <blockquote>“Atendimento impecável! Dr. Ticiano é muito atencioso.”</blockquote>
+                        <p class="review-author">Mariana G.</p>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+                        <blockquote>“A unidade Valentina é ótima. Equipe muito profissional.”</blockquote>
+                        <p class="review-author">Lucas V.</p>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+                        <blockquote>“Implantes com segurança e resultado perfeito.”</blockquote>
+                        <p class="review-author">Fernando R.</p>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+                        <blockquote>“Tecnologia de ponta em João Pessoa. Recomendo!”</blockquote>
+                        <p class="review-author">Cláudia M.</p>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+                        <blockquote>“Excelente profissional, explica tudo com paciência.”</blockquote>
+                        <p class="review-author">João Pedro L.</p>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+                        <blockquote>“Ambiente acolhedor e cuidado humanizado.”</blockquote>
+                        <p class="review-author">Beatriz S.</p>
+                    </article>
+                    </div>
+                    </div>
+                    <button class="carousel-button carousel-next" type="button" aria-label="Ver próximo depoimento">›</button>
                 </div>
-                <div class="shape-accent"></div>
+                <div class="carousel-status">
+                    <span class="carousel-counter" aria-live="polite">Depoimento 1 de 6</span>
+                    <div class="carousel-dots" aria-label="Escolher depoimento"></div>
+                </div>
+                <p class="reviews-note">Depoimentos publicados com identificação abreviada para preservar a privacidade.</p>
             </div>
-            <div class="about-text reveal">
-                <h2>Dr. Ticiano Oliveira</h2>
-                <h3>Excelência moldada pela experiência</h3>
-                <p>Com mais de 10 anos de trajetória dedicados à saúde bucal, o Dr. Ticiano Oliveira combina maestria técnica e um olhar humanizado. Especialista em <strong>Implantodontia</strong> e <strong>Ortodontia</strong>, dedica-se a reabilitar a função e a autoconfiança de cada paciente.</p>
-                <p>Sua prática é pautada pelo rigor científico e pelo uso de tecnologias avançadas, garantindo tratamentos precisos e resultados de alto padrão estético.</p>
+        </section>
+
+        <section id="sobre" class="about">
+            <div class="about-container">
+                <div class="about-visual reveal">
+                    <div class="video-shape">
+                        <video autoplay muted loop playsinline preload="none" poster="images/optimized/lifestyle-poster.jpg" class="lifestyle-video" aria-label="Dr. Ticiano Oliveira em ambiente profissional">
+                            <source data-src="videos/lifestyle-optimized.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="shape-accent"></div>
+                </div>
+                <div class="about-text reveal">
+                    <h2>Dr. Ticiano Oliveira</h2>
+                    <h3>Excelência moldada pela experiência</h3>
+                    <p>Com mais de 10 anos de trajetória dedicados à saúde bucal, o Dr. Ticiano Oliveira combina maestria técnica e um olhar humanizado. Especialista em <strong>Implantodontia</strong> e <strong>Ortodontia</strong>, dedica-se a reabilitar a função e a autoconfiança de cada paciente.</p>
+                    <p>Sua prática é pautada pelo rigor científico e pelo uso de tecnologias avançadas, garantindo tratamentos precisos e resultados de alto padrão estético.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer id="unidades" class="footer-premium">
         <div class="footer-container">
-            <div class="footer-column reveal">
-                <img src="images/logos/logo-ticiano.png" class="footer-unit-logo" alt="Dr. Ticiano Atlantis">
+            <section class="footer-column reveal">
+                <img src="images/optimized/logo-ticiano.webp" width="320" height="235" loading="lazy" decoding="async" class="footer-unit-logo" alt="Dr. Ticiano Oliveira">
                 <h3>Unidade Atlantis Office</h3>
-                <p>Av. Pres. Epitácio Pessoa, 2930 - Sala 2108 (Royal Clin) <br> Tambauzinho - João Pessoa - PB, 58042-006</p>
+                <p>Av. Pres. Epitácio Pessoa, 2930 — Sala 2108 (Royal Clin)<br>Tambauzinho — João Pessoa — PB, 58042-006</p>
                 <div class="footer-actions">
-                    <a href="https://wa.me/558399716256" class="btn-action">WhatsApp</a>
-                    <a href="https://www.instagram.com/dr.ticianooliveira" target="_blank" class="btn-action">Instagram</a>
+                    <a href="https://wa.me/558399716256" target="_blank" rel="noopener noreferrer" class="btn-action" aria-label="Agendar atendimento no Atlantis Office pelo WhatsApp">WhatsApp</a>
+                    <a href="https://www.instagram.com/dr.ticianooliveira" target="_blank" rel="noopener noreferrer" class="btn-action">Instagram</a>
                 </div>
                 <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.1154388167384!2d-34.8462966!3d-7.1199147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ace9d4715c55a0b%3A0x4a7569804e5e5dc2!2sAtlantis%20Offices%20Design%20Empresarial!5e0!3m2!1spt-BR!2sbr!4v1710000000000" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe title="Mapa da unidade Atlantis Office" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.1154388167384!2d-34.8462966!3d-7.1199147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ace9d4715c55a0b%3A0x4a7569804e5e5dc2!2sAtlantis%20Offices%20Design%20Empresarial!5e0!3m2!1spt-BR!2sbr!4v1710000000000" width="100%" height="200" style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-            </div>
-            <div class="footer-column reveal">
-                <img src="images/logos/logo-oralle.png" class="footer-unit-logo" alt="Oralle Valentina">
+            </section>
+            <section class="footer-column reveal">
+                <img src="images/optimized/logo-oralle.webp" width="220" height="220" loading="lazy" decoding="async" class="footer-unit-logo" alt="Oralle Clínica Odontológica">
                 <h3>Unidade Valentina</h3>
-                <p>R. Mariangela Lucena Peixoto, 1441 - Sala 103/104<br>Valentina de Figueiredo, João Pessoa - PB</p>
+                <p>R. Mariangela Lucena Peixoto, 1441 — Salas 103/104<br>Valentina de Figueiredo — João Pessoa — PB</p>
                 <div class="footer-actions">
-                    <a href="https://wa.me/5583998464959" class="btn-action">WhatsApp</a>
-                    <a href="https://www.instagram.com/oralleoficial" target="_blank" class="btn-action">Instagram</a>
+                    <a href="https://wa.me/5583998464959" target="_blank" rel="noopener noreferrer" class="btn-action" aria-label="Agendar atendimento na Oralle pelo WhatsApp">WhatsApp</a>
+                    <a href="https://www.instagram.com/oralleoficial" target="_blank" rel="noopener noreferrer" class="btn-action">Instagram</a>
                 </div>
                 <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.468222955519!2d-34.850406!3d-7.204394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acec18fadb93287%3A0x445301b10ecb0de0!2sORALLE%20-%20Cl%C3%ADnica%20Odontol%C3%B3gica!5e0!3m2!1spt-BR!2sbr!4v1710000000000" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe title="Mapa da unidade Oralle Valentina" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.468222955519!2d-34.850406!3d-7.204394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acec18fadb93287%3A0x445301b10ecb0de0!2sORALLE%20-%20Cl%C3%ADnica%20Odontol%C3%B3gica!5e0!3m2!1spt-BR!2sbr!4v1710000000000" width="100%" height="200" style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-            </div>
+            </section>
         </div>
-        <div class="footer-bottom"><p>© 2025 Oralle & Dr. Ticiano Oliveira. Todos os direitos reservados.</p></div>
+        <div class="footer-bottom">
+            <p>Dr. Ticiano Oliveira · CRO-PB 5435</p>
+            <p>© <span id="currentYear">2026</span> Oralle &amp; Dr. Ticiano Oliveira. Todos os direitos reservados.</p>
+            <p><a href="politica-de-privacidade.html">Política de Privacidade</a></p>
+        </div>
     </footer>
-
-    <script src="js/script.js"></script>
 </body>
 </html>
